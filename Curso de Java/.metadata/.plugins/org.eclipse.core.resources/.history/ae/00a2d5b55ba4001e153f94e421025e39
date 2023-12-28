@@ -1,0 +1,39 @@
+package Modelo.UmPraMuitos;
+
+import javax.persistence.Entity;
+import javax.xml.crypto.Data;
+import javax.persistence.Id;
+
+@Entity
+public class Pedido{
+
+	@Id
+	private Long Id;
+	
+	private Data data;
+
+	public Long getId() {
+		return Id;
+	}
+
+	public void setId(Long id) {
+		Id = id;
+	}
+
+	public Data getData() {
+		return data;
+	}
+
+	public void setData(Data data) {
+		this.data = data;
+	}
+
+	public Pedido() {
+	
+	}
+
+	public Pedido(Data data) {
+		this.data = data;
+	}
+	
+}

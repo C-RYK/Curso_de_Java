@@ -1,0 +1,10 @@
+package Infra;
+
+public class ProdutoDAO extends DAO{
+
+	public ProdutoDAO() {
+		super(Produto.class);
+	}
+
+	
+}

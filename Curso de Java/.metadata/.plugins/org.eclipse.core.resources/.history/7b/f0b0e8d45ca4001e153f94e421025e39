@@ -1,0 +1,47 @@
+package Modelo.UmPraMuitos;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.xml.crypto.Data;
+
+import org.hibernate.boot.model.relational.Database;
+
+import javax.persistence.Id;
+
+@Entity
+public class Pedido{
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long Id;
+	
+	@Column(nullable = false)
+	private Data data;
+
+	public Long getId() {
+		return Id;
+	}
+
+	public void setId(Long id) {
+		Id = id;
+	}
+
+	public Data getData() {
+		return data;
+	}
+
+	public void setData(Data data) {
+		this.data = data;
+	}
+
+	public Pedido() {
+		this(new Date());
+	}
+
+	public Pedido(Data data) {
+		this.data = data;
+	}
+	
+}

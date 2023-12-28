@@ -1,0 +1,12 @@
+package Modelo.Basico;
+
+public class Produto {
+
+	private Long Id;
+	
+	private String nome;
+	
+	private Double preco;
+	
+	
+}

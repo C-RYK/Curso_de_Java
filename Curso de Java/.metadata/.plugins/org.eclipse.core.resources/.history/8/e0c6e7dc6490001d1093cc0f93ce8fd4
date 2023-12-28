@@ -1,0 +1,34 @@
+package ProjetoPet;
+
+import java.util.Scanner;
+
+public class Telinha {
+
+	public static void main(String[] args) {
+		
+		Scanner entrada = new Scanner(System.in);
+		int esc;
+		
+		System.out.println("Olá, bem vindo ao Pet'z");
+		System.out.println("Escolha um Pet para ser seu:");
+		
+		System.out.println("1 - Cachorro" + "\n" + "2 - Gato" + "\n");
+		System.out.print(": ");
+		esc = entrada.nextInt();
+		
+		if(esc == 1) {
+			String nome;
+			System.out.print("Escolha um nome para seu Pet: ");
+			nome = entrada.next();
+			
+			String raça;
+			System.out.print("Escolha a raça do seu cachorro: ");
+			raça = entrada.next();
+			CachorroPet pet = new CachorroPet(nome, raça);
+			
+			System.out.printf("O nome do pet ficou: %S \nA raça do pet é: %S", pet.nome, pet.raça);
+		}
+		
+		entrada.close();
+	}
+}

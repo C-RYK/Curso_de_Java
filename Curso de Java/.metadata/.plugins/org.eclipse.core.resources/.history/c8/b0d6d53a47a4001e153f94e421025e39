@@ -1,0 +1,20 @@
+package Modelo.UmPraUm;
+
+public class Cliente {
+
+	private long Id;
+	
+	private String nome;
+	
+	private Assento assento;
+
+	public Cliente() {
+		
+	}
+
+	public Cliente(String nome, Assento assento) {
+		super();
+		this.nome = nome;
+		this.assento = assento;
+	}
+}

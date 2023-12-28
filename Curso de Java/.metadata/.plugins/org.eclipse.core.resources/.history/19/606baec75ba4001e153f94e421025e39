@@ -1,0 +1,30 @@
+package Modelo.UmPraMuitos;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+import org.hibernate.annotations.ManyToAny;
+
+import Modelo.Basico.Produto;
+
+import javax.persistence.Id;
+
+@Entity
+public class ItemPedido {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long Id;
+	
+	@ManyToAny
+	private Pedido pedido;
+	
+	@ManyToAny
+	private Produto produto;
+	
+	private int quantidade;
+	
+	private Double preco;
+	
+}

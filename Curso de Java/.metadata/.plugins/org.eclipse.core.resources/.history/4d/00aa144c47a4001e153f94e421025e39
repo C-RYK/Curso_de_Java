@@ -1,0 +1,18 @@
+package Modelo.UmPraUm;
+
+public class Assento {
+
+	private long Id;
+	
+	private String nome;
+
+	public Assento() {
+		
+	}
+
+	public Assento(long id, String nome) {
+		super();
+		Id = id;
+		this.nome = nome;
+	}
+}
